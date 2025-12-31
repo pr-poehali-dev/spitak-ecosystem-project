@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "Test POST create user",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "phone_number": "+37477123456",
+        "full_name": "Арам Григорян",
+        "district": "Арабкир"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "user": {
+          "id": "string",
+          "phone_number": "+37477123456",
+          "referral_code": "string"
+        }
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
